@@ -12,24 +12,24 @@ trap 'ERRTRAP $LINENO' ERR
 cp ~/.vim ~/vimrc -ar
 cp ~/.vimrc ~/vimrc
 cp ~/.vimrc.vundle ~/vimrc
-tar zcvf vimrc.tar.gz -C ~/vimrc .
+tar zcvf vimrc.tar.gz -C ~/vimrc . >/dev/null  && echo "vim packed ok"
 
 [ -f ~/tmux.tar.gz ] && rm -rf ~/tmux.tar.gz
 [ -d ~/tmux ] && rm -rf ~/tmux
 cp ~/.tmux ~/tmux -ar
 cp ~/.tmux.conf ~/tmux
-tar zcvf tmux.tar.gz -C ~/tmux .
+tar zcvf tmux.tar.gz -C ~/tmux . >/dev/null && echo "tmux packed ok"
 
 [ -f ~/tmuxifier.tar.gz ] && rm -rf ~/tmuxifier.tar.gz
 [ -d ~/tmuxifier ] && rm -rf ~/tmuxifier
 cp ~/.tmuxifier ~/tmuxifier -a
-tar zcvf tmuxifier.tar.gz -C tmuxifier .
+tar zcvf tmuxifier.tar.gz -C tmuxifier . >/dev/null && echo "tmuxifier packed ok"
 
 [ -f ~/oh-my-zsh.tar.gz ] && rm -rf ~/oh-my-zsh.tar.gz
 [ -d ~/oh-my-zsh ] && rm -rf ~/oh-my-zsh
 cp ~/.oh-my-zsh ~/oh-my-zsh -a
 cp ~/.zshrc ~/oh-my-zsh -a
-tar zcvf oh-my-zsh.tar.gz -C ~/oh-my-zsh .
+tar zcvf oh-my-zsh.tar.gz -C ~/oh-my-zsh . >/dev/null && echo "oh-my-zsh packed ok"
 
 
 
